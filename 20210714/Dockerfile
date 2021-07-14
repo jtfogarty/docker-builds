@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && echo "deb https://deb.nodesource.com/node_14.x focal main" > /etc/apt/sources.list.d/nodesource.list \
  && apt-get -yq update \
  && apt-get -y install --no-install-recommends \
-    build-essential libssl-dev libcurl4-openssl-dev python3-dev \
+    build-essential libssl-dev libcurl4-openssl-dev python3-dev unixodbc-dev\
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
