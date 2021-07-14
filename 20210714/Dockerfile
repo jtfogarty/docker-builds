@@ -1,5 +1,7 @@
 FROM public.ecr.aws/j1r0q0g6/notebooks/notebook-servers/jupyter-pytorch-cuda-full:master-1831e436
 
+USER root
+
 # install gcc
 RUN export DEBIAN_FRONTEND=noninteractive \
  && curl -sL "https://deb.nodesource.com/gpgkey/nodesource.gpg.key" | apt-key add - \
@@ -10,8 +12,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-
-USER root
 # install - requirements.txt
 COPY --chown=jovyan:users requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install -r /tmp/requirements.txt --no-cache-dir \
