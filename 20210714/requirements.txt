@@ -170,7 +170,7 @@ rinoh-typeface-texgyreheros==0.1.1
 rinoh-typeface-texgyrepagella==0.1.1
 rinohtype==0.5.3
 rope==0.16.0
-Rtree==0.9.3
+Rtree==0.9.7
 ruamel-yaml==0.15.87
 scikit-image==0.16.2
 scikit-learn==0.24.2
